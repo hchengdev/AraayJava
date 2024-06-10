@@ -6,17 +6,16 @@ public class Search {
         Scanner input = new Scanner(System.in);
         System.out.print("Enter student name: ");
         String name = input.nextLine();
-
+        boolean isExist = false;
         for (int i = 0; i < students.length; i++) {
-            boolean isExist = false;
             if (students[i].equals(name)) {
-                System.out.println(i + "là vị trí bạn cần tìm");
-                boolean isExist = true;
+                System.out.println(i + " là vị trí bạn cần tìm");
+                isExist = true;
                 break;
             }
-            if (!isExist) {
-                System.out.println("Not found" +name + " in the list.");
-            }
+        }
+        if (!isExist) {
+            System.out.println("Not found" +name + " in the list.");
         }
     }
 }
